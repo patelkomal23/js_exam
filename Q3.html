@@ -1,15 +1,17 @@
 <script>
     //  Count Vowels in a String 
-    let str = "JavaScript";
-    let count = 0;
-    let vowe = str.match(str === "a, e, i, o, u")
-    count = count + vowe;
-    console.log(vowe);
-    console.log(count);
-    
-    
-   
-
-
+    function vowels(str) {
+        let vowel = 'aeiouAEIOU';
+        let count = 0;
+        for (let char of str) {
+            if (vowel.includes(char)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    let str = "javascript";
+    let totalcount = vowels(str);
+    console.log("Total vowel count: " + totalcount);
 
 </script>
